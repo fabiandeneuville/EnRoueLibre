@@ -26,12 +26,12 @@ h1, h2, h3, h4, p, ul {
     color: #333;
 }
 
-h2 {
+h1 {
     font-size: 18px;
     text-align: center;
 }
 
-h3 {
+h2 {
     font-size: 16px;
     text-align: center;
 }
@@ -39,7 +39,6 @@ h3 {
 p, ul {
     font-size: 12px;
     text-align: left;
-    text-align: justify;
 }
 
 span {
@@ -230,6 +229,64 @@ footer p {
     text-align: center;
 }
 
+.modal-container {
+    z-index: 1;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal {
+    position: absolute;
+    width: 90%;
+    max-width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    background-color: crimson;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-modal-btn:focus {
+    transform: scale(1.1);
+}
+
+.show {
+    display: block;
+}
+
+.button:focus {
+    transform: scale(1.1);
+}
+
 @media screen and (max-width: 950px) {
 
     .offer {
@@ -248,5 +305,5 @@ footer p {
     .slider-element {
         padding: 0;
     }
-    
+
 }

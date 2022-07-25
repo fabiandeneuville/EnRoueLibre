@@ -18,6 +18,16 @@
 </head>
 
 <body>
+    <div class="modal-container">
+        <div class="overlay"></div>
+        <div class="modal">
+            <button class="close-modal-btn">X</button>
+            <p>Ah ! Il te plait ce vélo hein ?</p>
+            <p>Malheureusement ce site est fictif.</p>
+            <p>Il ne constitue qu'un exercice dans le cadre de ma formation &#128521</p>
+            <p>Merci de ton intérêt !</p>
+        </div>
+    </div>
     <!--HEADER START-->
     <header>
         <div class="header-banner">
@@ -35,44 +45,44 @@
             <div class="offer-slider-container">
                 <div class="slider">
                     <div class="slide">
-                        <img src="./assets/images/full-size/Serious_Valparola_105_LTD_noir_1.jpeg" alt="">
+                        <img src="./assets/images/full-size/Serious_Valparola_105_LTD_noir_1.jpeg" alt="Photo d'un vélo noir de côté">
                     </div>
                     <div class="slide">
-                        <img src="./assets/images/full-size/Serious_Valparola_105_LTD_noir_2.jpeg" alt="">
+                        <img src="./assets/images/full-size/Serious_Valparola_105_LTD_noir_2.jpeg" alt="Photo d'un vélo noir de face">
                     </div>
                     <div class="slide">
-                        <img src="./assets/images/full-size/Serious_Valparola_105_LTD_noir_3.jpeg" alt="">
+                        <img src="./assets/images/full-size/Serious_Valparola_105_LTD_noir_3.jpeg" alt="Photo du guidon d'un vélo">
                     </div>
                     <div class="slide">
-                        <img src="./assets/images/full-size/Serious_Valparola_105_LTD_noir_4.jpeg" alt="">
+                        <img src="./assets/images/full-size/Serious_Valparola_105_LTD_noir_4.jpeg" alt="Photo de la fourche d'un vélo">
                     </div>
                     <div class="slide">
-                        <img src="./assets/images/full-size/Serious_Valparola_105_LTD_noir_5.jpeg" alt="">
+                        <img src="./assets/images/full-size/Serious_Valparola_105_LTD_noir_5.jpeg" alt="Photo du pédalier et du dérailleur d'un vélo">
                     </div>
                     <div class="slide">
-                        <img src="./assets/images/full-size/Serious_Valparola_105_LTD_noir_6.jpeg" alt="">
+                        <img src="./assets/images/full-size/Serious_Valparola_105_LTD_noir_6.jpeg" alt="Photo de la selle d'un vélo">
                     </div>
                 </div>
                 <div class="slider-menu">
-                    <img class="miniature" src="./assets/images/miniatures/Serious_Valparola_105_LTD_noir_miniature_1.jpeg" tabindex="1" alt="">
-                    <img class="miniature" src="./assets/images/miniatures/Serious_Valparola_105_LTD_noir_miniature_2.jpeg" tabindex="1" alt="">
-                    <img class="miniature" src="./assets/images/miniatures/Serious_Valparola_105_LTD_noir_miniature_3.jpeg" tabindex="1" alt="">
-                    <img class="miniature" src="./assets/images/miniatures/Serious_Valparola_105_LTD_noir_miniature_4.jpeg" tabindex="1" alt="">
-                    <img class="miniature" src="./assets/images/miniatures/Serious_Valparola_105_LTD_noir_miniature_5.jpeg" tabindex="1" alt="">
-                    <img class="miniature" src="./assets/images/miniatures/Serious_Valparola_105_LTD_noir_miniature_6.jpeg" tabindex="1" alt="">
+                    <img class="miniature tab-item" src="./assets/images/miniatures/Serious_Valparola_105_LTD_noir_miniature_1.jpeg" role="button" tabindex="0" alt="Photo d'un vélo noir de côté">
+                    <img class="miniature tab-item" src="./assets/images/miniatures/Serious_Valparola_105_LTD_noir_miniature_2.jpeg" role="button" tabindex="0" alt="Photo d'un vélo noir de face">
+                    <img class="miniature tab-item" src="./assets/images/miniatures/Serious_Valparola_105_LTD_noir_miniature_3.jpeg" role="button" tabindex="0" alt="Photo du guidon d'un vélo">
+                    <img class="miniature tab-item" src="./assets/images/miniatures/Serious_Valparola_105_LTD_noir_miniature_4.jpeg" role="button" tabindex="0" alt="Photo de la fourche d'un vélo">
+                    <img class="miniature tab-item" src="./assets/images/miniatures/Serious_Valparola_105_LTD_noir_miniature_5.jpeg" role="button" tabindex="0" alt="Photo du pédalier et du dérailleur d'un vélo">
+                    <img class="miniature tab-item" src="./assets/images/miniatures/Serious_Valparola_105_LTD_noir_miniature_6.jpeg" role="button" tabindex="0" alt="Photo de la selle d'un vélo">
                 </div>
             </div>
             <div class="offer-details">
-                <h2 class="offer-details-title">Vélo de Course SERIOUS VALPAROLA LTD Shimano 105 34/50 Noir</h2>
+                <h1 class="offer-details-title">Vélo de Course SERIOUS VALPAROLA LTD Shimano 105 34/50 Noir</h1>
                 <hr>
-                <h3 class="offer-details-subtitle">Taillé pour la montagne et l'endurance !</h3>
+                <h2 class="offer-details-subtitle">Taillé pour la montagne et l'endurance !</h2>
                 <hr>
                 <p class="special-offer">OFFRE SPÉCIALE : <span class="special-offer-price">899,99 € *</span> au lieu de <span class="former-price">1599,99 €</span></p>
                 <span class="special-offer-condition">* Pour toute commande avant le <span class="offer-ending"></span></span>
                 <hr>
                 <form class="size-form">
                     <label class="size-label" for="size">Taille de cadre : </label>
-                    <select class="size-input" name="size" id="size">
+                    <select class="size-input tab-item" name="size" id="size">
                         <option value="choice">Veuillez choisir</option>
                         <option value="xs">XS</option>
                         <option value="s">S</option>
@@ -81,14 +91,14 @@
                         <option value="xl">XL</option>
                     </select>
                 </form>
-                <button class="order-btn">Je commande</button>
+                <button class="order-btn tab-item">Je commande</button>
             </div>
             
             <div class="product-description">
                 <nav class="product-description-menu">
-                    <button class="menu-button">Présentation</button>
-                    <button class="menu-button">Caractéristiques</button>
-                    <button class="menu-button">Informations techniques</button>
+                    <button class="menu-button tab-item">Présentation</button>
+                    <button class="menu-button tab-item">Caractéristiques</button>
+                    <button class="menu-button tab-item">Informations techniques</button>
                 </nav>
                 <div class="product-description-slider">
                     <div class="slider-element presentation">

@@ -10,6 +10,10 @@ const descriptionButtons : HTMLButtonElement[] = Array.from(document.querySelect
 const offerEndingDateDisplay = document.querySelector('.offer-ending') as HTMLSpanElement;
 const footerYearDisplay = document.querySelector('.year') as HTMLSpanElement;
 
+const orderButton = document.querySelector('.order-btn') as HTMLButtonElement;
+
+const tabItems : (HTMLDivElement | HTMLButtonElement | HTMLSelectElement)[] = Array.from(document.querySelectorAll('.tab-item') as NodeListOf<HTMLDivElement | HTMLButtonElement | HTMLSelectElement>) 
+
 /********** DATE SETTING **********/
 
 footerYearDisplay.textContent = getYear().toString()
@@ -41,6 +45,16 @@ for(let i = 0; i < descriptionButtons.length; i++){
     });
 }
 
+/********** HANDLING MODAL DISPLAY **********/
+
+const modalContainer = document.querySelector('.modal-container') as HTMLDivElement;
+const modalCloseButton = document.querySelector('.close-modal-btn') as HTMLButtonElement;
+
+orderButton.addEventListener('click', showModal);
+orderButton.addEventListener('keypress', showModal);
+modalCloseButton.addEventListener('click', closeModal);
+modalCloseButton.addEventListener('keypress', closeModal);
+
 /********** FUNCTIONS **********/ 
 
 function moveSlider(sliderElement : HTMLDivElement, index : number, numberOfSlides : number) : void {
@@ -51,10 +65,8 @@ function moveSlider(sliderElement : HTMLDivElement, index : number, numberOfSlid
 function checkActiveSlide() : void {
     for(let i = 0 ; i < descriptionButtons.length ; i++){
         if(i === activeSlide){
-            descriptionButtons[i].style.border = "2px solid green";
             descriptionButtons[i].style.color = "green";
         } else {
-            descriptionButtons[i].style.border = "2px solid #F5F5F5";
             descriptionButtons[i].style.color = "#333";
         }
     }
@@ -68,4 +80,23 @@ function setOfferEndingDate(currentDate : Date, numberOfDays : number) : Date {
 function getYear() : number {
     let currentYear = (new Date().getFullYear())
     return currentYear;
+}
+
+function showModal() : void {
+    modalContainer.classList.add('show');
+    setTabindex(tabItems, '-1');
+    modalCloseButton.setAttribute('tabindex', '0');
+    modalCloseButton.focus();
+};
+
+function closeModal() : void {
+    modalContainer.classList.remove('show');
+    setTabindex(tabItems, '0');
+    modalCloseButton.setAttribute('tabindex', '-1');
+}
+
+function setTabindex(elements : (HTMLDivElement | HTMLButtonElement | HTMLSelectElement)[], tabindexValue : string) : void {
+    elements.forEach((element : HTMLDivElement | HTMLButtonElement | HTMLSelectElement) => {
+        element.setAttribute('tabindex', tabindexValue);
+    })
 }
