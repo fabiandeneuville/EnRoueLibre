@@ -212,7 +212,7 @@ ul {
 }
 
 .size-input, .size-label {
-    padding: 2px 5px;
+    padding: 2px;
 }
 
 footer {
@@ -259,6 +259,11 @@ footer p {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
+}
+
+.modal p {
+    text-align: center;
+    font-size: 14px;
 }
 
 .close-modal-btn {
